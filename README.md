@@ -1,3 +1,5 @@
+# TL;DR
+
 Yarn 2 only supports those env variables:
 
 - `npm_execpath`
@@ -11,9 +13,15 @@ But they use to support many more when running scripts.
 
 This plugin aims to add them.
 
-# Supported env variables
+## Install
 
-## Fields in package.json
+If you're using yarn berry (yarn 2 and more), you can run:
+
+`yarn plugin import https://raw.githubusercontent.com/Ayc0/yarn-plugin-envs/v0.0.1/src/index.js` to install it.
+
+## Supported env variables
+
+### Fields in package.json
 
 All fields (except [exceptions](#exceptions)) present in the package.json will be available, in a serialized way.
 
@@ -43,13 +51,13 @@ npm_package_scripts_hello=world
 
 (note: all values will be converted to strings)
 
-## Exceptions
+### Exceptions
 
-### Global NPM vars
+#### Global NPM vars
 
 We don't want to get the default global NPM configs, So, we won't inject env like `npm_config_version_git_tag`, or `npm_config_version_tag_prefix`, or `npm_config_init_license` for instance.
 
-### Runtime specific vars
+#### Runtime specific vars
 
 In yarn 1, yarn was generating mappings and making them available as env vars. But we don't want to support those.
 
@@ -61,7 +69,7 @@ npm_config_argv='{"remain":[],"cooked":["run","hello"],"original":["hello"]}'
 
 As we don't see the point of those, we decided to not supporting them.
 
-### Complicated fields
+#### Complicated fields
 
 In the package.json, some fields can be written in multiple ways.
 
@@ -79,7 +87,7 @@ For instance, you can write:
 
 As we don't want to include _complex_ text parsers and keep this plugin as simple as possible, we won't support neither `author`, nor `contributors`, nor `repository` nor `funding` (different syntax but same idea).
 
-### Vars based on files
+#### Vars based on files
 
 In addition to having multiple string patterns in the package.json, the license could also be defined based on a LICENSE file present alongside the package.json.
 
@@ -87,7 +95,7 @@ As said before, we want to keep this plugin as simple as possible, so if we don'
 
 So we won't support `npm_package_license` nor `npm_package_readmeFilename` (even if they are written in the package.json)
 
-### Complete list
+#### Complete list
 
 - `npm_config_version_git_tag`
 - `npm_config_registry`
