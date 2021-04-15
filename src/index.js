@@ -17,7 +17,7 @@ function* walk(json) {
   }
 }
 
-const KEY = "npm_config";
+const KEY = "npm_package";
 
 module.exports = {
   name: `plugin-env`,
