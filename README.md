@@ -1,10 +1,10 @@
 # TL;DR
 
-Yarn 2 only supports those env variables:
+Yarn 2 only supports those env variables ([see official doc](https://yarnpkg.com/advanced/lifecycle-scripts#environment-variables))
 
-- `npm_execpath`
 - `npm_package_name`
 - `npm_package_version`
+- `npm_execpath`
 - `npm_config_user_agent`
 - `npm_node_execpath`
 - `npm_lifecycle_event`
