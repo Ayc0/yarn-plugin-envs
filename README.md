@@ -17,7 +17,7 @@ This plugin aims to add them.
 
 If you're using yarn berry (yarn 2 and more), you can run:
 
-`yarn plugin import https://raw.githubusercontent.com/Ayc0/yarn-plugin-envs/v0.0.1/src/index.js` to install it.
+`yarn plugin import https://raw.githubusercontent.com/Ayc0/yarn-plugin-envs/v0.0.3/src/index.js` to install it.
 
 ## Supported env variables
 
