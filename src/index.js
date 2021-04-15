@@ -20,7 +20,7 @@ function* walk(json) {
 const KEY = "npm_package";
 
 module.exports = {
-  name: `plugin-env`,
+  name: "plugin-envs",
   factory: (require) => ({
     hooks: {
       setupScriptEnvironment(project, processEnv) {
